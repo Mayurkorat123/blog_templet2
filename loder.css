@@ -1,0 +1,66 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+}
+
+.loder {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: rgb(136, 0, 255);
+    position: relative;
+    animation: loder 2s linear infinite reverse;
+    -webkit-animation: loder 2s linear infinite reverse;
+}
+
+@keyframes loder {
+
+    100% {
+        rotate: 360deg;
+    }
+
+
+
+}
+
+.loder::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 2;
+
+
+}
+
+.loder::after {
+
+    content: "";
+    position: absolute;
+    top: -3rem;
+    left: 9rem;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0 0 20px 10px rgb(173, 80, 255);
+    ;
+    border-radius: 50%;
+    background-color: rgb(159, 49, 255);
+    z-index: 4;
+}

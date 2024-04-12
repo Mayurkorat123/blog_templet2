@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.game {
+    width: 1000px;
+    height: 500px;
+    border-top: 1rem solid red;
+    background-color: transparent;
+    /* display: flex; */
+    /* position: relative; */
+
+    /* background-color: rgb(255, 255, 255); */
+}
+
+div {
+
+    width: 0.6rem;
+    height: 17rem;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    gap: 4.4rem;
+    position: relative;
+
+
+
+}
+
+.game div::before {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    bottom: 0;
+    aspect-ratio: 1;
+    top: 80%;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+}
+
+#game2:first-child {
+
+    animation: firstchail 4s linear infinite;
+    transform-origin: top;
+}
+
+@keyframes firstchail {
+    0% {
+        rotate: 0deg;
+    }
+
+    25% {
+        rotate: 30deg;
+    }
+
+    50% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+#game3 {
+
+    animation: firstchail2 4s linear 2s infinite;
+    transform-origin: top;
+}
+
+@keyframes firstchail2 {
+    0% {
+        rotate: 0deg;
+    }
+
+    25% {
+        rotate: -30deg;
+    }
+
+    50% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
